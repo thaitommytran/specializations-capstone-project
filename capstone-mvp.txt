@@ -1,7 +1,15 @@
 Pitch/Idea:
-    Like you, I too am not sitting on a fat stack of cash. And with the direction that big streaming services are moving towards, it's becoming more important to find that group of friends to contribute and share your accounts between. Why pay more to still watch ads? Why compromise on only being able to pick one streaming service, when you can have them all?
+    Like you, I too am not sitting on a fat stack of cash. And with
+    the direction that big streaming services are moving towards, it's
+    becoming more important to find that group of friends to contribute
+    and share your accounts between. Why pay more to still watch ads?
+    Why compromise on only being able to pick one streaming service,
+    when you can have them all?
 
-    Introducing Finesseflix, a web application that allows users to store all their shared login accounts and passwords for popular streaming services (e.g. Netflix, Hulu, Disney+, Prime Video, HBO Max, Paramount+, Crunchyroll, etc.)
+    Introducing Finesseflix, a web application that allows users to
+    store all their shared login accounts and passwords for popular
+    streaming services (e.g. Netflix, Hulu, Disney+, Prime Video,
+    HBO Max, Paramount+, Crunchyroll, etc.)
 
 MVP:
     • Users can create an account
