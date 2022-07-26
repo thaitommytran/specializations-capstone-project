@@ -1,0 +1,24 @@
+Pitch/Idea:
+    Like you, I too am not sitting on a fat stack of cash. And with the direction that big streaming services are moving towards, it's becoming more important to find that group of friends to share all accounts between. Why pay more to still watch ads? Why compromise on only being able to pick one streaming service, when you can have them all?
+
+    Introducing Finesseflix, a web application that allows users to store all their shared login accounts and passwords for popular streaming services (e.g. Netflix, Hulu, Disney+, Prime Video, HBO Max, Paramount+, Crunchyroll, etc.)
+
+MVP:
+    • Users can create an account
+    • Users can login with their accounts
+    • Users can add new streamAccInfo
+    • New streamAccInfo will be stored in a list
+    • List will display total count of stored streamAccInfo
+    • Passwords in streamAccInfo can be toggled (show/hide)
+    • Users can search for specific streamAccInfo
+    • Users can delete a specific streamAccInfo
+    • Users can log out of their accounts
+
+Future Features:
+    • Users can create groups to share streamAccInfo
+    • Users can join groups to share streamAccInfo
+    • Users will become leader of the groups they create
+    • Users will become members of the groups they join
+    • Leaders will have a room code to share for members to join
+    • Leaders can delete the groups they create
+    • Members can leave the group they join
