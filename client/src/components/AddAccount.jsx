@@ -23,7 +23,6 @@ const AddAccount = () => {
 
   return (
     <div>
-      AddAccount
       <form className="add-form">
         <h1>Add New Account</h1>
         <div className="input-container">
