@@ -1,0 +1,17 @@
+.add-form{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #44475a;
+    padding: 10px;
+}
+
+i{
+    background-color: #f8f8f2;
+}
+
+#add-button{
+    width: 50px;
+    align-self: flex-end;
+}
