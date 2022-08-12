@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles/StoredAccounts.css";
 import axios from "axios";
+import AccountCard from './AccountCard'
 
 const StoredAccounts = () => {
   const [accounts, setAccounts] = useState([]);
@@ -14,11 +15,19 @@ const StoredAccounts = () => {
   console.log(accounts);
 
   return (
-    <div>
-      StoredAccounts
-      <h1>Your Accounts</h1>
+    <div className="sub-div2">
+      <div className="stored-header">
+        <div className="your-accounts">
+          <h1 className="heading-name">Your Accounts</h1>
+          <p className="header-count">{accounts.length}</p>
+        </div>
+      </div>
       <hr />
-      <div className="stored-accounts"></div>
+      <div className="stored-accounts">
+        {accounts.map((element) => {
+          return <AccountCard account={element}/> 
+        })}
+      </div>
     </div>
   );
 };
