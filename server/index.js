@@ -1,9 +1,10 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const { addAccount, getAccounts } = require("./controller");
+
 const app = express();
 const port = process.env.PORT || 3045;
-const { addAccount, getAccounts } = require("./controller");
 
 app.use(express.json());
 app.use(cors());

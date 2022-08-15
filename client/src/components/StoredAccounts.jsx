@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./styles/StoredAccounts.css";
 import axios from "axios";
-import AccountCard from './AccountCard'
+import AccountCard from "./AccountCard";
 
-const StoredAccounts = () => {
-  const [accounts, setAccounts] = useState([]);
+const StoredAccounts = ({ accounts }) => {
+  // const [accounts, setAccounts] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3045/accounts")
-      .then((res) => setAccounts(res.data));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3045/accounts")
+  //     .then((res) => setAccounts(res.data));
+  // }, []);
 
-  console.log(accounts);
+  useEffect(() => console.log("accounts", accounts), [accounts]);
 
   return (
     <div className="sub-div2">
@@ -24,8 +24,8 @@ const StoredAccounts = () => {
       </div>
       <hr />
       <div className="stored-accounts">
-        {accounts.map((element) => {
-          return <AccountCard account={element}/> 
+        {accounts?.map((account, index) => {
+          return <AccountCard key={index} account={account} />;
         })}
       </div>
     </div>

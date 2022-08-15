@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./styles/AddAccount.css";
-import addAccImg from '../img/add-acc.jpg'
+import addAccImg from "../img/add-acc.jpg";
 
-const AddAccount = () => {
+const AddAccount = ({ setAccounts }) => {
   const [website, setWebsite] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +34,10 @@ const AddAccount = () => {
         user_id: 1
       })
       .then((res) => {
-        console.log(res.data);
+        setAccounts(res.data);
+        setWebsite('')
+        setUsername('')
+        setPassword('')
       });
   };
 
