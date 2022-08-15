@@ -1,8 +1,9 @@
 import React from "react";
+import "./styles/AccountCard.css";
 
 const AccountCard = (props) => {
   return (
-    <div>
+    <div className="item-list">
       <p className="initial"></p>
       <div className="list-content">
         <p>{props.account.website}</p>

@@ -1,0 +1,12 @@
+.item-list {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: solid 1px #f8f8f2;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 0 15px 15px 0;
+}
