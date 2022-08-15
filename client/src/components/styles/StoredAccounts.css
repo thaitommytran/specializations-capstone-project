@@ -1,0 +1,17 @@
+.sub-div2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 50vh;
+  background-color: #44475a;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.stored-accounts {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
