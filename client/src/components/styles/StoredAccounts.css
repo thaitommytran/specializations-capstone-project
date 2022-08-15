@@ -9,6 +9,13 @@
   box-sizing: border-box;
 }
 
+hr {
+  background-color: #f8f8f2;
+  border-style: none;
+  height: 1px;
+  width: 100%;
+}
+
 .stored-accounts {
   display: flex;
   width: 100%;

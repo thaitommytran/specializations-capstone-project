@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./styles/AddAccount.css";
-import addAccImg from "../img/add-acc.jpg";
+import addAccImg from "../img/add-acc-no-bg.png";
 
 const AddAccount = ({ setAccounts }) => {
   const [website, setWebsite] = useState("");
