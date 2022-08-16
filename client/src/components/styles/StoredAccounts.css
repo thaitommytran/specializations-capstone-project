@@ -6,7 +6,14 @@
   background-color: #44475a;
   padding: 20px;
   border-radius: 5px;
-  box-sizing: border-box;
+}
+
+.header-count {
+  border: solid 1px #f8f8f2;
+  border-radius: 8px;
+  width: 26px;
+  color: #f8f8f2;
+  font-size: 10px;
 }
 
 hr {
@@ -16,9 +23,28 @@ hr {
   width: 100%;
 }
 
+.show-passwords {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.check-box {
+  width: 15px;
+  height: 15px;
+  border-style: none;
+  outline: none;
+  margin-right: 10px;
+}
+
+.label-password {
+  color: #f8f8f2;
+  font-size: 12px;
+}
+
 .stored-accounts {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  box-sizing: border-box;
 }

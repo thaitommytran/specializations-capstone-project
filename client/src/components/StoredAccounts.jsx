@@ -23,6 +23,12 @@ const StoredAccounts = ({ accounts }) => {
         </div>
       </div>
       <hr />
+      <div className="show-passwords">
+        <input type="checkbox" className="check-box" id="check" />
+        <label htmlFor="check" className="label-password">
+          Show Passwords
+        </label>
+      </div>
       <div className="stored-accounts">
         {accounts?.map((account, index) => {
           return <AccountCard key={index} account={account} />;

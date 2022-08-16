@@ -10,3 +10,36 @@
   padding: 10px;
   margin: 0 15px 15px 0;
 }
+
+.initial {
+  background-color: rgb(255, 150, 38);
+  font-size: 16px;
+  color: #f8f8f2;
+  width: 35px;
+  border-radius: 25px;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.list-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #f8f8f2;
+  height: 100%;
+}
+
+.list-content > p {
+  font-size: 12px;
+  margin: 2px;
+}
+
+.del-btn {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  margin-left: auto;
+}
