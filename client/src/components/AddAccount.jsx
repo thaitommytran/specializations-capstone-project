@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./styles/AddAccount.css";
 import addAccImg from "../img/add-acc-no-bg.png";
 
@@ -9,17 +8,17 @@ const AddAccount = (props) => {
   const [password, setPassword] = useState("");
 
   const handleWebsite = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setWebsite(event.target.value);
   };
 
   const handleUsername = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setUsername(event.target.value);
   };
 
   const handlePassword = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setPassword(event.target.value);
   };
 

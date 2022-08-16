@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import "./styles/AccountCard.css";
 import passwordStars from "../img/password-stars.png";
 
