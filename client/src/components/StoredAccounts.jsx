@@ -5,17 +5,19 @@ import AccountCard from "./AccountCard";
 
 const StoredAccounts = (props) => {
   const [filter, setFilter] = useState("");
-  // const [accounts, setAccounts] = useState([]);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:3045/accounts")
-  //     .then((res) => setAccounts(res.data));
-  // }, []);
+  const [isShown, setIsShown] = useState(false);
 
   const handleFilter = (event) => {
     setFilter(event.target.value);
     props.onFilter(event.target.value);
+  };
+
+  const showPassword = (event) => {
+    if (event.target.checked) {
+      setIsShown(true);
+    } else {
+      setIsShown(false);
+    }
   };
 
   useEffect(() => console.log("accounts", props.accounts), [props.accounts]);
@@ -26,12 +28,22 @@ const StoredAccounts = (props) => {
         <div className="your-accounts">
           <h1 className="heading-name">Your Accounts</h1>
           <p className="header-count">{props.accounts.length}</p>
-          <input type="text" onChange={handleFilter} value={filter} />
         </div>
+        <input
+          type="text"
+          placeholder="Search"
+          onChange={handleFilter}
+          value={filter}
+        />
       </div>
       <hr />
       <div className="show-passwords">
-        <input type="checkbox" className="check-box" id="check" />
+        <input
+          type="checkbox"
+          className="check-box"
+          id="check"
+          onChange={showPassword}
+        />
         <label htmlFor="check" className="label-password">
           Show Passwords
         </label>
@@ -43,6 +55,7 @@ const StoredAccounts = (props) => {
               key={account.account_id}
               account={account}
               onDelete={props.onDelete}
+              isShown={isShown}
             />
           );
         })}

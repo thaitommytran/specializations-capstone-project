@@ -8,6 +8,24 @@
   border-radius: 5px;
 }
 
+.stored-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.your-accounts {
+  display: flex;
+  align-items: center;
+}
+
+.heading-name {
+  color: #f8f8f2;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
 .header-count {
   border: solid 1px #f8f8f2;
   border-radius: 8px;

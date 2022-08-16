@@ -35,6 +35,12 @@
   margin: 2px;
 }
 
+.password-stars {
+  width: 86px;
+  height: 10px;
+  margin: 8px 2px 2px;
+}
+
 .del-btn {
   width: 20px;
   height: 20px;
