@@ -3,7 +3,7 @@ import axios from "axios";
 import "./styles/AddAccount.css";
 import addAccImg from "../img/add-acc-no-bg.png";
 
-const AddAccount = ({ setAccounts }) => {
+const AddAccount = (props) => {
   const [website, setWebsite] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -26,19 +26,11 @@ const AddAccount = ({ setAccounts }) => {
   const handleSubmit = (event) => {
     // console.log("fire function");
     event.preventDefault();
-    axios
-      .post("http://localhost:3045/accounts", {
-        website: website,
-        username: username,
-        password: password,
-        user_id: 1
-      })
-      .then((res) => {
-        setAccounts(res.data);
-        setWebsite('')
-        setUsername('')
-        setPassword('')
-      });
+    props.onAdd(website, username, password).then(() => {
+      setWebsite("");
+      setUsername("");
+      setPassword("");
+    });
   };
 
   return (

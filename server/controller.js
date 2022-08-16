@@ -30,5 +30,15 @@ module.exports = {
         WHERE user_id = 1`
       )
       .then((dbRes) => res.status(200).send(dbRes[0]));
+  },
+
+  deleteAccount: (req, res) => {
+    sequelize.query(
+      `DELETE FROM accounts
+      WHERE account_id = ${+req.params.account_id}`
+    );
+    sequelize
+      .query("SELECT * FROM accounts")
+      .then((dbRes) => res.status(200).send(dbRes[0]));
   }
 };
