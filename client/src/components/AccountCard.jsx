@@ -26,7 +26,7 @@ const AccountCard = (props) => {
         )}
       </div>
       <button onClick={handleDelete} className="del-btn">
-        <i class="uil uil-trash-alt"></i>
+        <i className="uil uil-trash-alt"></i>
       </button>
     </div>
   );

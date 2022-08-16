@@ -65,7 +65,7 @@ const AddAccount = (props) => {
           Add
         </button>
       </form>
-      <img src={addAccImg} alt="" />
+      <img src={addAccImg} alt="add-acc-img" className="add-acc-img" />
     </div>
   );
 };

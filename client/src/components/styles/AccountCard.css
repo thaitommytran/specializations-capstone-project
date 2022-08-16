@@ -49,3 +49,9 @@
   outline: none;
   margin-left: auto;
 }
+
+.del-btn > i {
+  color: #f8f8f2;
+  width: 20px;
+  height: 20px;
+}
