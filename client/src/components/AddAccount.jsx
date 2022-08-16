@@ -39,15 +39,27 @@ const AddAccount = (props) => {
         <h1>Add New Account</h1>
         <div className="input-container">
           <i className="uil uil-tv-retro"></i>
-          <input onChange={handleWebsite} value={website} />
+          <input
+            onChange={handleWebsite}
+            value={website}
+            placeholder="Enter Website"
+          />
         </div>
         <div className="input-container">
           <i className="uil uil-user"></i>
-          <input onChange={handleUsername} value={username} />
+          <input
+            onChange={handleUsername}
+            value={username}
+            placeholder="Enter Username"
+          />
         </div>
         <div className="input-container">
           <i className="uil uil-padlock"></i>
-          <input onChange={handlePassword} value={password} />
+          <input
+            onChange={handlePassword}
+            value={password}
+            placeholder="Enter Password"
+          />
         </div>
         <button onClick={handleSubmit} id="add-button">
           Add
