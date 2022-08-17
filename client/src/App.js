@@ -5,14 +5,13 @@ import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
 
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [session, setSession] = useState();
-  const [loginUsername, setLoginUsername] = useState("");
 
-  const handleLogin = (value, username) => {
+  const handleLogin = (value) => {
     setSession(value);
-    setLoginUsername(username);
   };
 
   const handleLogout = () => {
@@ -60,7 +59,6 @@ function App() {
                 <HomePage
                   onLogout={handleLogout}
                   userId={session}
-                  loginUsername={loginUsername}
                 />
               ) : (
                 <Navigate to="/login" replace />

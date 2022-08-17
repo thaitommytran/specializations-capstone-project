@@ -59,5 +59,45 @@ module.exports = {
       .query(`select * from users where login_username = '${login_username}'`)
       .then((dbRes) => res.status(200).send(dbRes[0][0]))
       .catch((err) => res.status(400).send(err));
+  },
+
+  createUser: (req, res) => {
+    const { newUsername, newPassword } = req.body;
+
+    sequelize
+      .query(
+        `
+    INSERT INTO users (login_username, login_password)
+    VALUES ('${newUsername}', '${newPassword}') 
+    `
+      )
+      .then(() => {
+        sequelize
+          .query(
+            `
+      SELECT * FROM users WHERE login_username = '${newUsername}'
+      `
+          )
+          .then((dbRes) => {
+            res.status(200).send(dbRes[0][0]);
+          })
+          .catch((err) => res.status(400).send(err));
+      })
+      .catch((err) => res.status(400).send(err));
+  },
+
+  getUser: (req, res) => {
+    const user_id = +req.params.user_id;
+
+    sequelize
+      .query(
+        `
+    SELECT * FROM users
+    WHERE user_id = '${user_id}'
+    `
+      )
+      .then((dbRes) => {
+        res.status(200).send(dbRes[0][0]);
+      });
   }
 };

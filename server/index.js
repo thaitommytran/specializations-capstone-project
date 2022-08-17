@@ -5,7 +5,9 @@ const {
   addAccount,
   getAccounts,
   deleteAccount,
-  authUser
+  authUser,
+  createUser,
+  getUser
 } = require("./controller");
 
 const app = express();
@@ -18,5 +20,7 @@ app.post("/:user_id/accounts", addAccount);
 app.get("/:user_id/accounts", getAccounts);
 app.post("/:user_id/accounts/delete/:account_id", deleteAccount);
 app.post("/auth", authUser);
+app.post("/user/create", createUser);
+app.get("/user/:user_id", getUser);
 
 app.listen(port, () => console.log(`SERVER RUNNING ON PORT:${port}`));

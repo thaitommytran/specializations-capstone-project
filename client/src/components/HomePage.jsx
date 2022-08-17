@@ -5,7 +5,10 @@ import ContainerCard from "./ContainerCard";
 const HomePage = (props) => {
   return (
     <div>
-      <Header onLogout={props.onLogout} loginUsername={props.loginUsername} />
+      <Header
+        onLogout={props.onLogout}
+        userId={props.userId}
+      />
       <ContainerCard userId={props.userId} />
     </div>
   );
