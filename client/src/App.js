@@ -8,9 +8,11 @@ import "./App.css";
 
 function App() {
   const [session, setSession] = useState();
+  const [loginUsername, setLoginUsername] = useState("");
 
-  const handleLogin = (value) => {
+  const handleLogin = (value, username) => {
     setSession(value);
+    setLoginUsername(username);
   };
 
   const handleLogout = () => {
@@ -55,7 +57,11 @@ function App() {
             index
             element={
               session ? (
-                <HomePage onLogout={handleLogout} userId={session} />
+                <HomePage
+                  onLogout={handleLogout}
+                  userId={session}
+                  loginUsername={loginUsername}
+                />
               ) : (
                 <Navigate to="/login" replace />
               )

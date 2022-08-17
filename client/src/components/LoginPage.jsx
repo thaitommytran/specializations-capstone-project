@@ -29,7 +29,7 @@ const LoginPage = (props) => {
           };
 
           window.localStorage.setItem("session", JSON.stringify(item));
-          props.onLogin(res.data.user_id);
+          props.onLogin(res.data.user_id, res.data.login_username);
         }
       });
   };
