@@ -1,9 +1,12 @@
 html,
 body,
-#root,
-.App {
+#root {
   height: 100%;
   overflow: auto;
+}
+
+.App {
+  height: 100%;
 }
 
 #root {
