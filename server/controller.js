@@ -13,32 +13,51 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
   addAccount: (req, res) => {
-    const { website, username, password, user_id } = req.body;
+    const user_id = +req.params.user_id;
+    const { website, username, password } = req.body;
 
-    sequelize.query(`INSERT INTO accounts (
-      website, username, password, user_id)
-      values ('${website}', '${username}', '${password}', ${user_id})`);
     sequelize
-      .query("SELECT * FROM accounts")
-      .then((dbRes) => res.status(200).send(dbRes[0]));
+      .query(
+        `INSERT INTO accounts (
+      website, username, password, user_id)
+      values ('${website}', '${username}', '${password}', ${user_id})`
+      )
+      .then(() => {
+        sequelize
+          .query(`SELECT * FROM accounts WHERE user_id = ${user_id}`)
+          .then((dbRes) => res.status(200).send(dbRes[0]));
+      });
   },
 
   getAccounts: (req, res) => {
+    const user_id = +req.params.user_id;
+
     sequelize
-      .query(
-        `SELECT * FROM accounts
-        WHERE user_id = 1`
-      )
+      .query(`SELECT * FROM accounts WHERE user_id = ${user_id}`)
       .then((dbRes) => res.status(200).send(dbRes[0]));
   },
 
   deleteAccount: (req, res) => {
-    sequelize.query(
-      `DELETE FROM accounts
-      WHERE account_id = ${+req.params.account_id}`
-    );
+    const user_id = +req.params.user_id;
+
     sequelize
-      .query("SELECT * FROM accounts")
-      .then((dbRes) => res.status(200).send(dbRes[0]));
+      .query(
+        `DELETE FROM accounts
+      WHERE account_id = ${+req.params.account_id}`
+      )
+      .then(() => {
+        sequelize
+          .query(`SELECT * FROM accounts WHERE user_id = ${user_id}`)
+          .then((dbRes) => res.status(200).send(dbRes[0]));
+      });
+  },
+
+  authUser: (req, res) => {
+    const { login_username } = req.body;
+
+    sequelize
+      .query(`select * from users where login_username = '${login_username}'`)
+      .then((dbRes) => res.status(200).send(dbRes[0][0]))
+      .catch((err) => res.status(400).send(err));
   }
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles/Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="header-container">
       <h1>Finessflix</h1>
       <div className="user-container">
         <p>Hello, User</p>
-        <button>Logout</button>
+        <button onClick={props.onLogout}>Logout</button>
       </div>
     </div>
   );
