@@ -70,7 +70,7 @@ const LoginPage = (props) => {
       .then((res) => {
         const item = {
           value: res.data.user_id,
-          expiry: new Date().getTime() + 600000
+          expiry: new Date().getTime() + 1800000
         };
 
         window.localStorage.setItem("session", JSON.stringify(item));
