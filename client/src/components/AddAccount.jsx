@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./styles/AddAccount.css";
 import addAccImg from "../img/add-acc-no-bg.png";
+import "./styles/AddAccount.css";
 
 const AddAccount = (props) => {
   const [website, setWebsite] = useState("");

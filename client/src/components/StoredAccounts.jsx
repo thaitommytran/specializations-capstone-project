@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./styles/StoredAccounts.css";
 import AccountCard from "./AccountCard";
+import "./styles/StoredAccounts.css";
 
 const StoredAccounts = (props) => {
   const [filter, setFilter] = useState("");

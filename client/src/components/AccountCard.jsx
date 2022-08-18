@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles/AccountCard.css";
 import passwordStars from "../img/password-stars.png";
+import "./styles/AccountCard.css";
 
 const AccountCard = (props) => {
   const initial =

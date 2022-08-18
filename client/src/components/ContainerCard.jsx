@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./styles/ContainerCard.css";
 import AddAccount from "./AddAccount";
 import StoredAccounts from "./StoredAccounts";
+import "./styles/ContainerCard.css";
 
 const ContainerCard = (props) => {
   const [accounts, setAccounts] = useState([]);
