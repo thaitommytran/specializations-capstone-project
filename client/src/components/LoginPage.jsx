@@ -47,7 +47,7 @@ const LoginPage = (props) => {
         if (res.data.login_password === loginPassword) {
           const item = {
             value: res.data.user_id,
-            expiry: new Date().getTime() + 600000
+            expiry: new Date().getTime() + 1800000
           };
 
           window.localStorage.setItem("session", JSON.stringify(item));
@@ -76,7 +76,7 @@ const LoginPage = (props) => {
         window.localStorage.setItem("session", JSON.stringify(item));
         props.onLogin(res.data.user_id);
       })
-      .catch((err) => {
+      .catch(() => {
         setCreateLoginError(true);
       });
   };
@@ -84,6 +84,10 @@ const LoginPage = (props) => {
   return (
     <div className="login-page-container">
       <div className="login-page">
+        <div className="login-title-container text-white">
+          <h1 className="login-title">Finessflix</h1>
+          <p className="login-text">All your streaming accounts, all in one place.</p>
+        </div>
         <img
           src={loginPageImg}
           alt="login-page-img"
@@ -111,6 +115,9 @@ const LoginPage = (props) => {
             Log In
           </Button>
           <hr />
+          <Form.Text className="sign-up-text text-white">
+            Don't have an account?
+          </Form.Text>
           <Button
             className="sign-up-btn"
             onClick={handleShow}
@@ -126,16 +133,18 @@ const LoginPage = (props) => {
             <Modal.Body>
               <Form.Group>
                 <Form.Control
+                  className="signup-field"
                   placeholder="New Username"
                   value={newUsername}
                   onChange={handleNewUsername}
                   isInvalid={createLoginError}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Username has already been created
+                  Username has already been taken
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Control
+                className="signup-field"
                 placeholder="New Password"
                 value={newPassword}
                 onChange={handleNewPassword}

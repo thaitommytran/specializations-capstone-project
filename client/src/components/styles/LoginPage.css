@@ -9,13 +9,32 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   background-color: #44475a;
   padding: 40px;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.login-title-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.login-title{
+  font-size: 4rem;
+}
+
+.login-text{
+  text-align: start;
+  font-size: 1.5rem;
+  width: 300px;
+  font-style: italic;
+  font-weight: 100;
 }
 
 .login-fields {
@@ -39,8 +58,24 @@
   row-gap: 12px;
 }
 
+.login-form > hr {
+  background-color: #f8f8f2;
+  border-style: none;
+  height: 1px;
+  width: 100%;
+  margin: 0;
+}
+
+.signup-field {
+  margin-bottom: 16px;
+}
+
 .login-btn {
   width: 100%;
+}
+
+.sign-up-text {
+  align-self: center;
 }
 
 .sign-up-btn {
@@ -51,3 +86,4 @@
 .login-page-img {
   width: 270px;
 }
+

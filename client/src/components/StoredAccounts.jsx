@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./styles/StoredAccounts.css";
-import axios from "axios";
 import AccountCard from "./AccountCard";
 
 const StoredAccounts = (props) => {

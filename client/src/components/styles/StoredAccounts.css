@@ -1,12 +1,13 @@
 .sub-div2 {
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-color: #44475a;
   padding: 20px;
   border-radius: 5px;
   align-items: stretch;
   flex: 1 0 auto;
+  width: 84%;
+  align-self: center;
 }
 
 .stored-header {

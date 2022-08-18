@@ -7,7 +7,6 @@ import StoredAccounts from "./StoredAccounts";
 const ContainerCard = (props) => {
   const [accounts, setAccounts] = useState([]);
   const [allAccounts, setAllAccounts] = useState([]);
-  const [authenticated, setAuthenticated] = useState(false);
 
   const handleAdd = async (website, username, password) => {
     return axios
@@ -34,7 +33,7 @@ const ContainerCard = (props) => {
   };
 
   const handleFilter = (value) => {
-    console.log(value);
+    // console.log(value);
     // if no filters, show all accounts
     if (!value.length) {
       setAccounts(allAccounts);
@@ -43,7 +42,7 @@ const ContainerCard = (props) => {
       const filteredAccounts = accounts.filter((item) => {
         return item.website.includes(value) || item.username.includes(value);
       });
-      console.log(filteredAccounts);
+      // console.log(filteredAccounts);
       setAccounts(filteredAccounts);
     }
   };
@@ -57,9 +56,6 @@ const ContainerCard = (props) => {
 
   return (
     <div id="container-card">
-      {/* 
-    {!authenticated && <Login />}
-    */}
       <AddAccount
         accounts={accounts}
         setAccounts={setAccounts}
