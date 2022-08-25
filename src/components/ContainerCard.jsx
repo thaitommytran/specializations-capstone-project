@@ -10,7 +10,7 @@ const ContainerCard = (props) => {
 
   const handleAdd = async (website, username, password) => {
     return axios
-      .post(`http://localhost:3045/${props.userId}/accounts`, {
+      .post(`/${props.userId}/accounts`, {
         website: website,
         username: username,
         password: password
@@ -24,7 +24,7 @@ const ContainerCard = (props) => {
   const handleDelete = (account_id) => {
     axios
       .post(
-        `http://localhost:3045/${props.userId}/accounts/delete/${account_id}`
+        `/${props.userId}/accounts/delete/${account_id}`
       )
       .then((res) => {
         setAccounts(res.data);
@@ -48,7 +48,7 @@ const ContainerCard = (props) => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:3045/${props.userId}/accounts`).then((res) => {
+    axios.get(`/${props.userId}/accounts`).then((res) => {
       setAccounts(res.data); // represents whats showing on the UI
       setAllAccounts(res.data); // represents all accounts to be used with no filters
     });

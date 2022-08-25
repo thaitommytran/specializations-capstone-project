@@ -6,7 +6,7 @@ const Header = (props) => {
   const [loginUsername, setloginUsername] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:3045/user/${props.userId}`).then((res) => {
+    axios.get(`/user/${props.userId}`).then((res) => {
       setloginUsername(res.data.login_username);
     });
   }, [props.userId]);

@@ -39,7 +39,7 @@ const LoginPage = (props) => {
 
   const handleLogin = () => {
     axios
-      .post("http://localhost:3045/auth", {
+      .post("/auth", {
         login_username: loginUsername
       })
       .then((res) => {
@@ -63,7 +63,7 @@ const LoginPage = (props) => {
 
   const handleCreateAccount = () => {
     axios
-      .post("http://localhost:3045/user/create", {
+      .post("/user/create", {
         newUsername: newUsername,
         newPassword: newPassword
       })
